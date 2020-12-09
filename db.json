@@ -1,0 +1,144 @@
+[{
+  "type": "production",
+  "name": "rPiProduction",
+  "id": "502d7906-6299-42d1-bcf6-563595bdde02",
+  "commonDB": {
+    "type": "aDB",
+    "server": "aServer",
+    "database": "aDBName",
+    "collection": "aColName",
+    "user": "aUser",
+    "password": "aPass"
+  },
+  "configuration": [{
+      "type": "asset",
+      "identifier": "Arburg520M",
+      "name": "Arburgt 520 M",
+      "id": "9bf6573a-5b1f-4318-b89c-6c64b5d77c9b",
+      "masterData": "878e2f1a-c46b-4346-a286-bfc189b72cd3",
+      "databases": [{
+        "type": "SQL",
+        "dataType": "curve",
+        "server": "aServer",
+        "database": "arb520m",
+        "user": "postgres",
+        "password": "postgres"
+      }],
+      "kafka": {
+        "endpoint": "aURL",
+        "username": "aUser",
+        "password": "aPass",
+        "dataTopic": "aTopic"
+      },
+      "interfaces": [{
+        "type": "OPCUA",
+        "address": "aAdress",
+        "encryption": "usernamePasswort",
+        "security": "RSA",
+        "username": "aUser",
+        "password": "aPass",
+        "acquisition": "cyclic",
+        "parameters": [{
+            "identifier": "injectionSpeed",
+            "standardizedIdentifier": "actInjectionSpeed",
+            "uuid": "bfd97753-e787-4bc2-bcc1-f0f9d62ded63",
+            "unit": "ccm/s",
+            "accuracy": "0.5",
+            "access": "ns=2;i=1234"
+          },
+          {
+            "identifier": "barrelTemperature01",
+            "uuid": "bfd97753-e787-4bc2-bcc1-f0f9d62ded63",
+            "unit": "°C",
+            "accuracy": "2",
+            "access": "ns=2;i=1266"
+          },
+          {
+            "identifier": "barrelTemperature02",
+            "uuid": "bfd97753-e787-4bc2-bcc1-f0f9d62ded63",
+            "unit": "°C",
+            "accuracy": "2",
+            "access": "ns=2;i=1267"
+          }
+        ],
+        "observables": [{
+          "identifier": "injectionSpeed",
+          "uuid": "bfd97753-e787-4bc2-bcc1-f0f9d62ded63",
+          "unit": "ccm/s",
+          "accuracy": "0.5",
+          "access": "ns=2;i=1234"
+        }],
+        "qualityParams": [{
+          "identifier": "maxInjectionPressure",
+          "uuid": "bfd97753-e787-4bc2-bcc1-f0f9d62ded63",
+          "unit": "bar",
+          "accuracy": "5",
+          "access": "ns=2;i=2005"
+        }],
+        "triggers": [{
+          "identifier": "cycle_nr",
+          "uuid": "abcdefgh1234546789",
+          "unit": "",
+          "accuracy": "1",
+          "access": "ns=2;i=1"
+        }]
+      }],
+      "inputs": [{
+          "type": "asset",
+          "identifier": "gwkProTemp_123",
+          "id": "bfd97753-e787-4bc2-bcc1-f0f9d62ded64",
+          "dependencyType": "time",
+          "dependencyValue": "0000-00-00T00:00:00"
+        },
+        {
+          "type": "asset",
+          "identifier": "scale",
+          "id": "bfd97753-e787-4bc2-bcc1-f0f9d62ded64",
+          "dependencyType": "cycle",
+          "dependencyValue": "+3"
+        }
+      ]
+    },
+    {
+      "type": "asset",
+      "name": "GWK Temperierer",
+      "identifier": "gwkProTemp_123",
+      "id": "bfd97753-e787-4bc2-bcc1-f0f9d62ded64",
+      "masterData": "64bb6893-eb4c-4ebc-b23d-0afe8a7dc88c",
+      "inputs": ""
+    },
+    {
+      "type": "asset",
+      "identifier": "inMouldSensor",
+      "name": "pT-Sensor Angussnah",
+      "id": "bfd97753-e787-4bc2-bcc1-f0f9d62ded64",
+      "masterData": "64bb6893-eb4c-4ebc-b23d-0afe8a7dc88c",
+      "inputs": ""
+    },
+    {
+      "type": "asset",
+      "identifier": "scale",
+      "name": "KERN Waage",
+      "id": "bfd97753-e787-4bc2-bcc1-f0f9d62ded64",
+      "masterData": "64bb6893-eb4c-4ebc-b23d-0afe8a7dc88c",
+      "inputs": [],
+      "interface": [{
+        "type": "OPCUA",
+        "address": "opc.tcp://134.130.210.12:4840",
+        "encryption": "NONE",
+        "security": "NONE",
+        "username": "",
+        "password": ""
+      }],
+      "parameters": [],
+      "observables": [],
+      "qualityParams": [{
+        "identifier": "scaleWeight",
+        "uuid": "bfd97753-e787-4bc2-bcc1-f0f9d62ded63",
+        "unit": "g",
+        "accuracy": "0.001",
+        "access": "ns=2;i=2005"
+      }]
+    }
+  ]
+}]
