@@ -1,4 +1,5 @@
-[{
+{
+  "processConfiguration": [{
   "type": "production",
   "name": "rPiProduction",
   "id": "502d7906-6299-42d1-bcf6-563595bdde02",
@@ -142,3 +143,4 @@
     }
   ]
 }]
+  }
