@@ -22,8 +22,8 @@
         "dataType": "curve",
         "server": "aServer",
         "database": "arb520m",
-        "user": "postgres",
-        "password": "postgres"
+        "user": "aUser",
+        "password": "aPass"
       }],
       "kafka": {
         "endpoint": "aURL",
